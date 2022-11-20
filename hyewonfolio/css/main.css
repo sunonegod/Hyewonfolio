@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+    align-items: flex;
+}
+.soon_bg {
+    background-image: url(../img/opening.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: -100;
+    background-position: center,center;
+}
