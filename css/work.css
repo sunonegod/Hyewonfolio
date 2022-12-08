@@ -1,0 +1,92 @@
+.inner{
+    width: 100%;
+    height: calc(100vh*2030/1080);
+}
+#work{
+    position: relative;
+    top: calc(100vh*10/1080);
+    width: calc(100vw*1686/1920);
+    height: calc(100vh*1926/1080);
+    border: solid 1px red;
+    margin: 0 auto;
+}
+.project_name{
+    position: relative;
+    width: calc(100vw*297/1920);
+    height: calc(100vh*829/1080);
+    border: solid calc(100vw*2/1920) white;
+    border-radius: calc(100vw*48/1920);
+    /* box-sizing: border-box; */
+}
+.project_name h1{
+    position: absolute;
+    top: 38%;
+    left: -78%;
+    font-family: 'Montserrat';
+    font-size: calc(100vw*155/1920);
+    font-weight: 900;
+    line-height: calc(100vw*195/1920);
+    color: #5fd65f;
+    transform: rotate(-90deg);
+}
+.project_thumbnail{
+    position: absolute;
+    width: calc(100vw*1367/1920);
+    display: inline-block;
+    top: 0;
+    left: calc(100vw*319/1920);
+}
+.project_overview{
+    position: absolute;
+    width: calc(100vw*691/1920);
+    height: calc(100vh*478/1080);
+    left: 0;
+    top: calc(100vh*860/1080);
+    border: solid calc(100vw*2/1920) white;
+    border-radius: calc(100vw*34/1920);
+}
+.project_role{
+    position: absolute;
+    width: calc(100vw*410/1920);
+    height: calc(100vh*478/1080);
+    left: calc(100vw*713/1920);
+    top: calc(100vh*860/1080);
+    border: solid calc(100vw*2/1920) white;
+    border-radius: calc(100vw*34/1920);
+}
+.project_epilogue{
+    position: absolute;
+    width: calc(100vw*541/1920);
+    height: calc(100vh*478/1080);
+    left: calc(100vw*1145/1920);
+    top: calc(100vh*860/1080);
+    border: solid calc(100vw*2/1920) white;
+    border-radius: calc(100vw*34/1920);
+}
+.project_code{
+    position: absolute;
+    width: calc(100vw*693/1920);
+    left: 0;
+    top: calc(100vh*1369/1080);
+}
+.project_code_review{
+    position: absolute;
+    width: calc(100vw*528/1920);
+    height: calc(100vh*555/1080);
+    left: calc(100vw*713/1920);
+    top: calc(100vh*1369/1080);
+    border: solid calc(100vw*2/1920) white;
+    border-radius: calc(100vw*34/1920);
+}
+.min_thumbnail0{
+    position: absolute;
+    width: calc(100vw*422/1920);
+    left: calc(100vw*1263/1920);
+    top: calc(100vh*1369/1080);
+}
+.min_thumbnail1{
+    position: absolute;
+    width: calc(100vw*422/1920);
+    left: calc(100vw*1263/1920);
+    top: calc(100vh*1651/1080);
+}

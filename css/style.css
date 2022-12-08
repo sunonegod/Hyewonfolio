@@ -1,22 +1,61 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-html,
-body {
-    width: 100vw;
-    height: auto;
+#main{
+    position: relative;
+    width: calc(100vw*1756/1920);
+    height: calc(100vh*928/1080);
+    border: solid 1px red;
     margin: 0 auto;
-    align-items: flex;
 }
-/* .soon_bg {
-    background-image: url(../img/opening.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    z-index: -100;
-    background-position: center,center;
+.ready{
+    position: relative;
+    width: calc(100vw*1720/1920);
+    height: calc(100vh*224/1080);
+    left: calc(100vw*9/1920);
+    border: solid 1px aqua;
+    color: white;
 }
- */
-
-/* 버튼 */
+.ready h1{
+    display: inline-block;
+    font-family: 'Montserrat';
+    font-size: 160px;
+    font-weight: 900;
+}
+.ready .yes{
+    display: inline-block;
+    width: calc(100vw*497/1920);
+    height: calc(100vh*224/1080);
+    border: solid calc(100vw*6/1920) #FCE876;
+    border-radius: 10000px;  
+    font-family: 'Montserrat';
+    font-size: 160px;
+    font-weight: 900;
+    text-align: center;
+}
+.ready .arrow{
+    position: absolute;
+    display: inline-block;
+    width: calc(100vw*294/1920);
+    height: calc(100vh*6/1080);
+    border-bottom: dashed calc(100vw*16/1920) #fce876;
+    top: calc(100vh*112/1080);
+}
+.ready .inReady{
+    position: absolute;
+    display: inline-block;
+    width: calc(100vw*627/1920);
+    height: calc(100vh*224/1080);
+    left: calc(100vw*1052/1920);
+    background-color: #FCE876;
+    color: #1d1d1d;
+    font-family: 'Montserrat';
+    font-size: calc(100vw*160/1920);
+    font-weight: 900;
+    text-align: center;
+}
+.set{
+    position: relative;
+    width: calc(100vw*1763/1920);
+    height: calc(100vh*224/1080);
+    top: calc(100vh*55/1080);
+    border: solid 1px aqua;
+    color: white;
+}

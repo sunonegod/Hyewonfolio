@@ -1,18 +1,9 @@
-html{
-    background-color: #232524;
-}
-*{
-    padding: 0;
-    margin: 0;
-    color: 000;
-    font-size: 16px;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 a{
     display: block;
     text-decoration: none;
     width: calc(100vw*100/1920);
-    rotate: 90deg;
+
 }
 ul{
     list-style: none;
@@ -24,144 +15,211 @@ header{
     justify-content: center;
     width: calc(100vw*1920/1920);
     height: calc(100vh*100/1080);
-    border: solid 1px white;
+    z-index: 100;
 }
-button{
-    cursor: pointer;
+
+
+#toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: calc(100vw*64/1920);
     height: calc(100vw*64/1920);
-    border-radius: 100%;
     border: solid calc(100vw*2/1920) white;
-    background-color: rgba(0,0,0,0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 1000 !important;
 }
-.hambergerIcon{
-    height: 10px;
-    width:100px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 50px;
-    background-color: #4A2545;
-    transform: translate(-50%,-50%) rotate(0deg);
-    transition: all ease 0.5s;
-    &::before,&::after{
-      content:"";
-      position: absolute;
-      height: inherit;
-      border-radius: inherit;
-      background-color: inherit;
-      margin: auto;
-      width: 50%;
-      transition: all ease 0.5s;
-    }
-    &::before{
-      top: -20px;
-      left: 0;
-      transform-origin: left;
-    }
-    &::after{
-      bottom:-20px;
-      right: 0;
-      transform-origin: right;
-    }
-  }
-  
-  .open{
-    transform:translate(-50%,-50%) rotate(135deg);
-    &::before{
-      top:0;
-      transform: translateX(100%) rotate(-90deg);
-    }
-    &::after{
-      bottom:0;
-      transform: translateX(-100%) rotate(-90deg);
-    }
-  }
-  
 
-/* div.bar,
-div.bar:before,
-div.bar:after {
+#toggle div.bar,
+#toggle div.bar:before,
+#toggle div.bar:after {
+    display: flex;
     width: calc(100vw*28/1920);
-    height: calc(100vw*2/1920);
-    background: white;
+    height: calc(100vh*2/1080);
+    background: #fff;
 }
 
-div.bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    transform: translateY(9px);
+#toggle div.bar {
+    transform: translateY(0px);
     transition: all 0.3s 0.3s ease;
 }
 
-div.bar:before {
+#toggle div.bar:before {
     content: " ";
     position: absolute;
-    bottom: 9px;
+    bottom: 8px;
     transition: bottom 0.3s 0.3s ease, transform 0.3s ease;
 }
 
- div.bar:after {
+ #toggle div.bar:after {
     content: " ";
     position: absolute;
-    top: 9px;
+    top: 8px;
     transition: top 0.3s 0.3s ease, transform 0.3s ease;
-} */
-/* .button_line0{
-    width: calc(100vw*28/1920);
-    border-top: solid calc(100vw*2/1920) white;
-} */
+}
 
-/* .toggle {
+/* Animation */
+
+#toggle div.bar.animate {
+    background: rgba(255, 255, 255, 0);
+}
+
+#toggle div.bar.animate:after {
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 0.3s ease, transform 0.3s 0.3s ease;
+}
+
+#toggle div.bar.animate:before {
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 0.3s ease, transform 0.3s 0.3s ease;
+}
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s ease, max-height 0s 0.1s ease;
+    /* z-index: -1000 !important; */
+    opacity: 1;
+    background: rgb(231, 28, 28);
+}
+
+#overlay nav {
+    display: flex;
     position: absolute;
-    display: block;
-    cursor: pointer;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .toggle span {
-    display: block;
-    background: #FFF;
-    width: 42px;
-    height: 4px;
-    border-radius: 3px;
-    transition: 0.25s margin 0.25s, 0.25s transform;
-  }
-  .toggle span:nth-child(1) {
-    margin-bottom: 8px;
-  }
-  .toggle span:nth-child(3) {
-    margin-top: 8px;
-  }
-  .toggle.active span {
-    transition: 0.25s margin, 0.25s transform 0.25s;
-  }
-  .toggle.active span:nth-child(1) {
-    margin-top: 8px;
-    margin-bottom: -4px;
-    transform: rotate(45deg);
-  }
-  .toggle.active span:nth-child(2) {
-    transform: rotate(45deg);
-  }
-  .toggle.active span:nth-child(3) {
-    margin-top: -4px;
-    transform: rotate(135deg);
-  } */
-/* #gnb ul{
-    display: block;
+    bottom: 30px;
+
 }
-#gnb li{
-    margin: 0 10px;
+
+#overlay nav ul,
+#overlay nav ul li {
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: static;
+    text-align: center;
 }
-#gnb li a{
-    font-size: 15px;
-    color: #fff;
-    font-weight: 500;
-} */
+
+ #overlay nav ul {
+    padding: calc(100vw*30/1920);
+ }
+
+ #overlay nav ul li {
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: all 0.9s 0s ease;
+    margin-left: 60px;
+ }
+
+ #overlay nav ul li a {
+   position: relative;
+   height: calc(100vh*50/1080);
+   width: calc(100vw*350/1920);
+   display: inline-block;
+   color: #ffffff;
+   transition: all 0.6s 0s ease;
+ }
+
+ #overlay nav ul li:nth-child(1) a:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    opacity: 0;
+    height: 50px;
+    background: #E94429;
+    transition: all 0.6s 0s ease;
+    z-index: -100;
+  }
+  #overlay nav ul li:nth-child(2) a:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    opacity: 0;
+    height: 50px;
+    background: #6DEBF5;
+    transition: all 0.6s 0s ease;
+    z-index: -100;
+  }
+  #overlay nav ul li:nth-child(3) a:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    opacity: 0;
+    height: 50px;
+    background: #FCE876;
+    transition: all 0.6s 0s ease;
+    z-index: -100;
+  }
+  #overlay nav ul li:nth-child(4) a:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    opacity: 0;
+    height: 50px;
+    background: white;
+    transition: all 0.6s 0s ease;
+    z-index: -100;
+  }
+
+ #overlay nav ul li a:hover:after {
+   width: 100%;
+   opacity: 1;
+ }
+
+ #overlay nav ul li a:hover {
+   color: #888888;
+ }
+
+ #page.overlay #overlay nav ul li:nth-child(1) {
+   transition: all 0.9s 0.6s ease;
+ }
+ #page.overlay #overlay nav ul li:nth-child(2) {
+   transition: all 0.9s 0.8s ease;
+ }
+ #page.overlay #overlay nav ul li:nth-child(3) {
+   transition: all 0.9s 1.0s ease;
+ }
+ #page.overlay #overlay nav ul li:nth-child(4) {
+   transition: all 0.9s 1.2s ease;
+ }
+
+
+ #overlay nav ul li a {
+    text-transform: normal;
+    font-size: 35px;
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+ }
+
+#page.overlay #overlay {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    max-height: 100%;
+    opacity: 1;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+#page.overlay #overlay nav ul li {
+  margin-left: 0;
+  opacity: 1;
+}
