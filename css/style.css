@@ -823,11 +823,16 @@
     border-radius: calc(100vw*47/1920);
     border: solid calc(100vw*3/1920) white;
 }
-/* footer{
+footer{
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #6DEBF5;
     height: calc(100vw*32/1080);
-    width: auto;
-    top: calc(100vh*6448/1080);
+    width: 100%;
+    top: calc(100vh*5900/1080);
     color: #232524;
-} */
+    font-family: 'pretendard-mi';
+
+}
