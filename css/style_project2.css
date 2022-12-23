@@ -14,7 +14,7 @@
 }
 body,
 html {
-  background-color: #0450DB;
+  background-color: #1d1d1d;
 }
 .fullscreen {
   position: absolute;
@@ -66,7 +66,7 @@ header{
 }
 
 .project {
-  background-color: #0450DB;
+  background-color: #1d1d1d;
 }
 .project_inner{
   position: relative;
@@ -116,7 +116,7 @@ header{
 }
 
 .contents {
-  background-color: #0450DB;
+  background-color: #1d1d1d;
 }
 .contents_inner{
   position: relative;
@@ -144,7 +144,7 @@ header{
 
 
 .thoughts {
-  background-color: #0450DB;
+  background-color: #1d1d1d;
 }
 .thoughts_inner{
   position: relative;
@@ -164,8 +164,8 @@ header{
   width: calc(100vw*800/1920);
   left: calc(100vw*50/1920);
   top: calc(100vh*100/1080);
-  font-family: 'pretendard-re';
   line-height: calc(100vh*30.5/1080);
+  font-family: 'pretendard-re';
   font-size: calc(100vw*20/1920);
   color: white;
 }
@@ -173,7 +173,7 @@ header{
 
 
 .code{
-  background-color: #0450DB;
+  background-color: #1d1d1d;
 }
 .code_inner{
   position: relative;
@@ -207,14 +207,14 @@ header{
   background-position: center center;
 }
 .project_bg {
-  background-image: url('../img/mockup.png');
+  background-image: url('../img/musical_lizzie.jpg');
 }
 .contents_bg {
-  background-image: url('../img/cloup2.png');
+  background-image: url('../img/lizzie_full.jpg');
 }
 
 .code_bg {
-  background-image: url('../img/photo.jpg');
+  background-image: url('../img/lizzie_design.jpg');
 }
 .thoughts_bg {
   background-image: url('../img/code.png');
