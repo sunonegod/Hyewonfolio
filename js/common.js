@@ -209,6 +209,17 @@ $(document).ready(function(){
     })
 });
 
+$(document).ready(function(){
+    $('.resume_btn').mouseover(function(){
+        $('.resume_btn_hover').addClass('resume_btn_active')
+    })
+});
+$(document).ready(function(){
+    $('.resume_btn').mouseout(function(){
+        $('.resume_btn_hover').removeClass('resume_btn_active')
+    })
+});
+
 
 
 

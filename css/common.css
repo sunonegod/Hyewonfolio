@@ -156,3 +156,34 @@ header{
   transform: translateY(-7px) rotate(225deg);
 }
 
+.resume_btn{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 94%;
+  top: 85%;
+  width: calc(100vw*90/1920);
+  height: calc(100vw*90/1920);
+  background-color: #E94429;
+  border-radius: 100%;
+  font-family: 'pretendard-mi';
+  font-size: calc(100vw*20/1920);
+}
+.resume_btn_hover{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 93.6%;
+  top: 84.4%;
+  width: calc(100vw*105/1920);
+  height: calc(100vw*105/1920);
+  border: solid calc(100vw*2/1920);
+  border-radius: 100%;
+  z-index: -2;
+  opacity: 0;
+}
+.resume_btn_active{
+  opacity: 1;
+}
